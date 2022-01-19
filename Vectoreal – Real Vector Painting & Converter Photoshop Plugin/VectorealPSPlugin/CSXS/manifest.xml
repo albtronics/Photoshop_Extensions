@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ExtensionManifest ExtensionBundleId="com.indworks.vectoreal" ExtensionBundleVersion="1.0.0" Version="4.0"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ExtensionList>
+        <Extension Id="com.indworks.vectoreal.panel" Version="1.0.0"/>
+    </ExtensionList>
+    <ExecutionEnvironment>
+        <HostList>
+            <Host Name="PHSP" Version="14"/>
+            <Host Name="PHXS" Version="14"/>
+        </HostList>
+        <LocaleList>
+            <Locale Code="All"/>
+        </LocaleList>
+        <RequiredRuntimeList>
+            <RequiredRuntime Name="CSXS" Version="4.0"/>
+        </RequiredRuntimeList>
+    </ExecutionEnvironment>
+    <DispatchInfoList>
+        <Extension Id="com.indworks.vectoreal.panel">
+            <DispatchInfo>
+                <Resources>
+                    <MainPath>./client/index.html</MainPath>
+                    <ScriptPath>./host/index.jsx</ScriptPath>
+                    <CEFCommandLine>
+                        <Parameter>--nodejs-disabled</Parameter>
+                    </CEFCommandLine>
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+                    <Type>Panel</Type>
+                    <Menu>VECTOREAL</Menu>
+                    <Icons>
+                        <Icon Type="Normal">./images/IconLight.png</Icon>
+                        <Icon Type="RollOver">./images/IconLight.png</Icon>
+                        <Icon Type="DarkNormal">./images/IconDark.png</Icon>
+                        <Icon Type="DarkRollOver">./images/IconDark.png</Icon>
+                    </Icons>
+                    <Geometry>
+                        <Size>
+                            <Width>350</Width>
+                            <Height>690</Height>
+                        </Size>
+                        <MinSize>
+                            <Width>350</Width>
+                            <Height>590</Height>
+                        </MinSize>
+                        <MaxSize>
+                            <Width>1000</Width>
+                            <Height>1000</Height>
+                        </MaxSize>
+                    </Geometry>
+                    <Icons/>
+                </UI>
+            </DispatchInfo>
+        </Extension>
+    </DispatchInfoList>
+</ExtensionManifest>
